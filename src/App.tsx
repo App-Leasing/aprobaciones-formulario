@@ -233,8 +233,27 @@ export default function App() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
     setStatus({ type: "", msg: "" });
+
+    // Validación estricta de campos geográficos
+    const hasDistritos = options.distritos.length > 0;
+    const hasLocalidades = options.localidades.length > 0;
+    const hasBarrios = options.barrios.length > 0;
+
+    if (
+      !formData.estadoId ||
+      (hasDistritos && !formData.distritoId) ||
+      (hasLocalidades && !formData.localidadId) ||
+      (hasBarrios && !formData.barrioId)
+    ) {
+      setStatus({
+        type: "error",
+        msg: "Por favor, completa todos los campos de ubicación (Departamento, Distrito, Ciudad y Barrio)."
+      });
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const payload = {
