@@ -1,12 +1,11 @@
 # Portal de Solicitudes de Leasing — Teklease
 
 Sistema web institucional para la recepción, procesamiento y aprobación de solicitudes de leasing de **Teklease (Richford Paraguay S.A.)**, integrado directamente con **Odoo 18** via XML-RPC y con el flujo de verificación de identidad de **Didit** a través de **n8n**.
-
-🌐 **URL de Producción:** [https://formulario.teklease.com.py](https://formulario.teklease.com.py)
+ **URL de Producción:** [https://formulario.teklease.com.py](https://formulario.teklease.com.py)
 
 ---
 
-## 🚀 Arquitectura y Flujo de Trabajo
+##  Arquitectura y Flujo de Trabajo
 
 ```mermaid
 sequenceDiagram
@@ -32,7 +31,7 @@ sequenceDiagram
 
 ---
 
-## ✨ Características Principales
+##  Características Principales
 
 - **Formulario Optimizado:** Diseño responsivo y centrado con paleta corporativa slate-grey.
 - **Subida de Múltiples Archivos:** Permite adjuntar hasta 6 comprobantes de ingresos simultáneos (PDF/Imagen) con opción de previsualización y eliminación antes de enviar.
@@ -57,7 +56,7 @@ sequenceDiagram
 
 ---
 
-## 💻 Desarrollo Local
+##  Desarrollo Local
 
 ### Requisitos Previos
 
@@ -94,7 +93,7 @@ sequenceDiagram
 
 ---
 
-## 📦 Flujo de Despliegue en VPS (Producción)
+##  Flujo de Despliegue en VPS (Producción)
 
 El despliegue está automatizado mediante Git y un script helper en el servidor.
 
@@ -119,6 +118,6 @@ El script `./update.sh` ejecuta automáticamente:
 
 ---
 
-## 📄 Licencia y Propiedad
+##  Licencia y Propiedad
 
 Desarrollado para **Teklease / Richford Paraguay S.A.** — Portal Institucional de Aprobaciones.
