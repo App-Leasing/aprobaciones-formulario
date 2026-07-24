@@ -95,7 +95,7 @@ export default function App() {
             formaPago: formaP.opciones || [],
             sucursal: suc.opciones || [],
             agentes: agentes.opciones || [],
-            estados: est.opciones || [],
+            estados: (est.opciones || []).filter((o: OdooOpcion) => o.nombre.trim() !== "Central"),
             packLeasing: pack.opciones || [],
             operador: oper.opciones || []
           }));
